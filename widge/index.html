@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<title></title>
+	</head>
+	<body>
+		<!--侧滑菜单容器-->
+	 <div id="Main" class="mui-off-canvas-wrap mui-draggable">  
+		
+    		<!--菜单部分-->
+    		<aside id="offCanvasSide" class="mui-off-canvas-right" >    
+        		<div id="offCanvasSideScroll" class="mui-scroll-wrapper"> 
+            		<button id="offCanvasHide" type="button"  class="mui-btn mui-btn-primary mui-btn-raised " >关闭侧滑菜单</button>        
+        			<div class="mui-scroll">
+        			<ul class="mui-table-view">
+       					<li><a href="list.html">列1</a></li>
+        					<li onclick="showMsg('haha')">列2</li>
+        					<li><a href="">列3</a></li>
+        					<li><a href="">列4</a></li>
+        					<li><a href="">列5</a></li>
+        					<li><a href="">列6</a></li>
+        					<li><a href="">列7</a></li>
+        					<li><a href="">列9</a></li>
+        					<li><a href="">列10</a></li>
+        					<li><a href="">列11</a></li>
+        					<li><a href="">列12</a></li>
+        					<li><a href="">列13</a></li>
+        					<li><a href="">列14</a></li>
+        					<li><a href="">列15</a></li>
+        					<li><a href="">列16</a></li>
+        					<li><a href="">列17</a></li>
+        					<li><a href="">列18</a></li>
+        					<li><a href="">列19</a></li>
+        					<li><a href="">列20</a></li>
+        					<li><a href="">列21</a></li>
+        					<li><a href="">列22</a></li>
+        					<li><a href="">列23</a></li>
+    				</ul>
+    				</div>
+        		</div>
+    		</aside>
+
+    		<!-- 主界面 -->
+    		<div class="mui-inner-wrap" >
+    			<!--滑动的主体-->
+       		 <div id="offCanvasContentScroll" class="mui-content  mui-scroll-wrapper">
+       		 	<!--加个滚动DOOM js申明一下才能和左右滑动同时适配-->
+				<div class="mui-scroll">
+					<div id='app' class="mui-panel mui-scalablemui-content-padded">
+        					<input type="text" v-model="message"/>
+        					<h1>{{message}}</h1>
+        				</div>
+      				<button id="offCanvasShow" type="button" class="mui-btn mui-btn-primary mui-btn-raised ">显示侧滑菜单</button>
+    					<div style="width: 600px;height:600px;" >
+    						<canvas id="myChart" width="150" height="150"></canvas>
+    					</div>
+				</div>
+				
+           		
+       		 </div>
+       		 
+        		<!-- 这个东西不能删，利用他还原界面 -->
+        		<div class="mui-off-canvas-backdrop"></div>
+    		</div>
+	 </div>
+	</body>
+	
+	<script src="script/asyn.js"></script>
+</html>
